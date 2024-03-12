@@ -4,7 +4,7 @@
 ## Bing Image Downloader
 <hr>
 
-Python library to download bulk of images form Bing.com.
+Python library to download bulk of images from Bing.com.
 This package uses async url, which makes it very fast while downloading.<br/>
 
 
@@ -43,19 +43,31 @@ downloader.download(query_string, limit=100,  output_dir='dataset', adult_filter
 `verbose` : (optional, default is True) Enable downloaded message.<br />
 
 
-You can also test the programm by runnning `test.py keyword`
+You can also test the program by running `test.py keyword`
 
 
 ### PyPi <br />
 https://pypi.org/project/bing-image-downloader/
 
+### Usage for modified version <br />
+
+```from downloader import download
+
+query_string = "‘A dithering leader:’ Alabama senator criticizes Biden in GOP response"
+links = download(query_string, limit=5, output_dir='dataset', adult_filter_off=True, force_replace=False, timeout=60, verbose=True)
+
+print("[!] Retrieved Image Links:")
+for index, link in enumerate(links, start=1):
+    print("[{}] {}".format(index, link))
+```
 
 
+This project was not done by me, all credits go to original creator.
 
 </br>
 
 ### Donate
-You can buy me a coffee if this project was helpful to you.</br>
+You can buy him a coffee if this project was helpful to you.</br>
 
 [<img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg" alt="Show your support" width="180"/>](https://www.buymeacoffee.com/gurugaurav)
   
